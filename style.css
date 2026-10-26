@@ -44,7 +44,8 @@ a {
 }
 
 .bar-links a {
-  color: #585e68d7;
+  font-size: 12px;
+  color: #585e68b9;
   font-weight: 600;
   text-decoration: none;
 }
@@ -57,7 +58,8 @@ a {
 }
 
 .help {
-  color: #616874c7;
+  font-size: 13px;
+  color: #616874b4;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -73,12 +75,13 @@ a {
 }
 
 .country {
+  font-size: 13px;
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 20px;
   padding: 8px 18px;
   font-weight: 600;
-  color: #4a5568;
+  color: #4a5568c0;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -670,7 +673,7 @@ footer {
 }
 
 .footer-column h4 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #dad8cd;
   margin-bottom: 10px;
@@ -683,7 +686,7 @@ footer {
 .footer-column li a {
   text-decoration: none;
   color: #ffff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 10px;
@@ -695,14 +698,932 @@ footer {
   gap: 200px;
 }
 
-.column .box .image img {
+.column .boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.column .box .image2 img {
+  width: 150px;
+}
+
+.column .box .image3 img {
+  width: 150px;
 }
 /* FOOTER  */
 
 .copyright {
-  background: #f7f6f4;
+  background: #cbcac8;
   margin: 0 auto;
   padding: 50px 0;
   width: 1500px;
   text-align: center;
+}
+
+.copyright h3 {
+  font-size: 16px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  color: #545c66;
+  font-weight: 400;
+}
+
+/* Hide the checkbox and menu button on desktop */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 600px) {
+  .navlinks {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Show the menu button */
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    order: 2;
+  }
+
+  .menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #384a62;
+    border-radius: 3px;
+  }
+
+  /* Hide the links until the menu is clicked */
+  .right-nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 20px;
+  }
+
+  .links,
+  .login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .links a,
+  .login a {
+    font-size: 15px;
+  }
+
+  /* Show links when the checkbox is checked */
+  #menu-toggle:checked ~ .right-nav {
+    display: flex;
+  }
+}
+
+/* TABLET VIEW  */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* GENERAL WIDTHS */
+  .upper-bar,
+  .navlinks,
+  .hero,
+  .customer,
+  .amazing,
+  footer,
+  .copyright {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .products,
+  .nigeria,
+  .count {
+    width: 90%;
+    max-width: 1230px;
+  }
+
+  /* TOP BAR */
+  .upper-bar {
+    padding: 12px 25px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .bar-links {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .countries {
+    gap: 12px;
+  }
+
+  .country {
+    padding: 7px 12px;
+  }
+
+  /* NAVIGATION */
+  .navlinks {
+    height: auto;
+    min-height: 70px;
+    padding: 18px 25px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .print img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .right-nav {
+    margin-left: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .links {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .links a,
+  .login a {
+    font-size: 13px;
+  }
+
+  .login {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 35px 5%;
+  }
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .hero-section .text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-section .text h2 {
+    font-size: clamp(40px, 5vw, 60px);
+  }
+
+  .hero-section .text p {
+    font-size: 20px;
+  }
+
+  form {
+    margin: 30px 0;
+  }
+
+  form label {
+    font-size: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 25px 45px 25px 15px;
+  }
+
+  form input::placeholder {
+    font-size: 14px;
+  }
+
+  .search-box span {
+    position: absolute;
+    right: 15px;
+  }
+
+  .hero-image {
+    flex: 0 1 40%;
+    min-width: 0;
+  }
+
+  .hero-image img {
+    position: static;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  /* PRODUCTS */
+  .products {
+    padding: 30px 0;
+    margin: 25px auto;
+  }
+
+  .products-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .products-boxes .boxes {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .products-boxes .boxes .image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .products-boxes .boxes .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .products-boxes .boxes .sub {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .boxes .sub a {
+    display: inline-block;
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* NIGERIA SECTION */
+  .nigeria {
+    padding: 30px 0;
+    margin: 25px auto;
+  }
+
+  .nigeria .text .crown {
+    font-size: 27px;
+    letter-spacing: 1px;
+  }
+
+  .nigeria .text .par {
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .nigeria .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CUSTOMER REVIEWS */
+  .customer {
+    padding: 45px 5%;
+  }
+
+  .customer .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .customer .box {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .customer .box .texts {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .customer .box .texts .detail {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* COUNT ON US */
+  .count {
+    padding: 30px 0;
+    margin: 30px auto;
+  }
+
+  .count .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .count .box {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 12px;
+    gap: 20px;
+  }
+
+  .count .box .texts {
+    min-width: 0;
+  }
+
+  .count .box .texts .detail {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* PARTNERS */
+  .amazing {
+    padding: 45px 5%;
+  }
+
+  .amazing .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .amazing .patner {
+    flex: 0 1 calc(33.333% - 25px);
+    min-width: 0;
+  }
+
+  .amazing .patner img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .amazing .patner a {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 45px 5%;
+  }
+
+  .footer-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+  }
+
+  .footer-column > .column {
+    min-width: 0;
+  }
+
+  .column .boxes .image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .column .boxes .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* COPYRIGHT */
+  .copyright {
+    padding: 30px 20px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   Applies to screens up to 600px
+========================================= */
+
+@media screen and (max-width: 600px) {
+  /* GENERAL WIDTHS */
+  .upper-bar,
+  .navlinks,
+  .hero,
+  .customer,
+  .amazing,
+  footer,
+  .copyright {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .products,
+  .nigeria,
+  .count {
+    width: 92%;
+    max-width: 100%;
+  }
+
+  /* TOP BAR */
+  .upper-bar {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .bar-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .bar-links a {
+    font-size: 12px;
+  }
+
+  .right {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .help {
+    font-size: 12px;
+  }
+
+  .whatsapp img {
+    max-width: 25px;
+    height: auto;
+  }
+
+  .countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .country {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .country img {
+    max-width: 18px;
+    height: auto;
+  }
+
+  /* NAVIGATION */
+  .navlinks {
+    height: auto;
+    min-height: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .print img {
+    display: block;
+    width: 140px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .right-nav {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+  }
+
+  .links a {
+    font-size: 13px;
+  }
+
+  .login {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .login a {
+    font-size: 13px;
+  }
+
+  .login img {
+    max-width: 25px;
+    height: auto;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    height: auto;
+    padding: 35px 18px;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .hero-section .text {
+    width: 100%;
+  }
+
+  .hero-section .text h2 {
+    font-size: clamp(38px, 10vw, 52px);
+    line-height: 1.15;
+  }
+
+  .hero-section .text p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  form {
+    width: 100%;
+    margin: 25px 0;
+  }
+
+  form label {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 20px 45px 20px 14px;
+    margin: 8px 0;
+  }
+
+  form input::placeholder {
+    font-size: 13px;
+  }
+
+  .search-box span {
+    position: absolute;
+    right: 14px;
+  }
+
+  .search-box span img {
+    max-width: 22px;
+    height: auto;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .hero-image img {
+    position: static;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* PRODUCTS */
+  .products {
+    padding: 25px 0;
+    margin: 20px auto;
+  }
+
+  .products .texts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .products .texts h2 {
+    font-size: 25px;
+    line-height: 1.3;
+  }
+
+  .products .texts a {
+    font-size: 14px;
+  }
+
+  .products-boxes {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .products-boxes .boxes {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .products-boxes .boxes .image-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.3 / 1;
+  }
+
+  .products-boxes .boxes .image-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .products-boxes .boxes .sub {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .boxes .sub h3 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .boxes .sub h2 {
+    font-size: 19px;
+    margin-bottom: 22px;
+  }
+
+  .boxes .sub a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 11px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* NIGERIA SECTION */
+  .nigeria {
+    padding: 25px 0;
+    margin: 20px auto;
+  }
+
+  .nigeria .text .crown {
+    font-size: 25px;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .nigeria .text .par {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .nigeria br {
+    display: none;
+  }
+
+  .nigeria .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* CUSTOMER REVIEWS */
+  .customer {
+    padding: 35px 16px;
+  }
+
+  .customer .text h2 {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  .customer .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .customer .box {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .customer .box .img {
+    flex-shrink: 0;
+  }
+
+  .customer .box .texts {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .customer .box .texts .head {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .customer .box .texts .detail {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* COUNT ON US */
+  .count {
+    padding: 25px 0;
+    margin: 25px auto;
+  }
+
+  .count .text h2 {
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .count .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .count .box {
+    width: 100%;
+    min-width: 0;
+    padding: 18px 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .count .box .img {
+    flex-shrink: 0;
+  }
+
+  .count .box .texts {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .count .box .texts .head {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .count .box .texts .detail {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* PARTNERS */
+  .amazing {
+    padding: 35px 18px;
+  }
+
+  .amazing .text h2 {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  .amazing .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px 15px;
+  }
+
+  .amazing .patner {
+    width: calc(50% - 8px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .amazing .patner img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .amazing .patner a {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 35px 20px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-column > .column {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footer-column h4 {
+    font-size: 18px;
+  }
+
+  .footer-column li a {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .column .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column .boxes .image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .column .boxes .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* COPYRIGHT */
+  .copyright {
+    padding: 25px 16px;
+  }
+
+  .copyright .text h3 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
