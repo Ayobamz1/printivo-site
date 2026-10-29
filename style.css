@@ -1453,16 +1453,6 @@ footer {
     gap: 12px;
   }
 
-  .customer .box .img {
-    flex-shrink: 0;
-  }
-
-  .customer .box .texts {
-    flex: 1;
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-
   .customer .box .texts .head {
     font-size: 14px;
     line-height: 1.5;
@@ -1495,14 +1485,15 @@ footer {
   .count .box {
     width: 100%;
     min-width: 0;
-    padding: 18px 8px;
+    padding: 8px 100px 8px 0px;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 18px;
+    /* gap: 18px; */
   }
 
   .count .box .img {
-    flex-shrink: 0;
+    display: block;
   }
 
   .count .box .texts {
@@ -1511,19 +1502,19 @@ footer {
   }
 
   .count .box .texts .head {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
   }
 
   .count .box .texts .detail {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.7;
   }
 
   /* PARTNERS */
   .amazing {
-    padding: 35px 18px;
+    padding: 60px 20px;
   }
 
   .amazing .text h2 {
@@ -1535,11 +1526,11 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 25px 15px;
+    gap: 30px 16px;
   }
 
   .amazing .patner {
-    width: calc(50% - 8px);
+    width: 170px;
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -1554,7 +1545,7 @@ footer {
   }
 
   .amazing .patner a {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
