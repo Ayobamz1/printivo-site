@@ -58,10 +58,15 @@ a {
 }
 
 .help {
+  display: flex;
+  flex-direction: column;
   font-size: 13px;
   color: #616874b4;
   font-weight: 600;
-  line-height: 1.4;
+}
+
+.help h4 {
+  margin-bottom: -20px;
 }
 
 .help a {
@@ -1155,7 +1160,30 @@ footer {
   }
 
   /* TOP BAR */
-  .upper-bar {
+  .bar-links {
+    display: none;
+  }
+
+  .help {
+    margin-left: 20px;
+    width: 50px;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 20px;
+  }
+
+  .countries {
+    display: flex;
+    gap: -20px;
+  }
+
+  .help h4,
+  .or {
     display: none;
   }
 
@@ -1234,6 +1262,10 @@ footer {
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
+  }
+
+  .hero-image {
+    display: none;
   }
 
   .hero-section .text {
