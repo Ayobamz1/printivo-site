@@ -1165,7 +1165,7 @@ footer {
   }
 
   .help {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     width: 50px;
     height: auto;
     min-height: 0;
